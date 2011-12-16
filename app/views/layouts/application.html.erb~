@@ -4,6 +4,7 @@
   <title>Forem</title>
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
+  <%= stylesheet_link_tag "forem/twist/style" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -11,7 +12,7 @@
     <nav>
         <% if user_signed_in? %>
             <%= link_to current_user.email, main_app.edit_user_registration_path %>
-            | <%= link_to "Sign out", main_app.destroy_user_session_path %>
+            | <%= link_to "Sign out", main_app.destroy_user_session_path, :method=>:delete %>
             <% if current_user.forem_admin %>
                 | <%= link_to "Administrate", forem.admin_root_url %>
             <% end %>
