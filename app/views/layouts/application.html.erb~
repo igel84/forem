@@ -4,7 +4,7 @@
   <title>Forem</title>
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
-  <%= stylesheet_link_tag "forem/twist/style" %>
+  <%= stylesheet_link_tag "forem/orange/style" %>
   <%= csrf_meta_tags %>
 </head>
 <body>

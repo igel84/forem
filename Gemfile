@@ -9,6 +9,7 @@ gem 'sqlite3'
 gem 'devise'
 gem 'forem', :git => "git://github.com/radar/forem.git"
 gem 'forem-theme-twist', :git => "git://github.com/radar/forem-theme-twist.git"
+gem 'forem-theme-orange', :git => "git://github.com/radar/forem-theme-orange.git"
 
 # Gems used only for assets and not required
 # in production environments by default.
