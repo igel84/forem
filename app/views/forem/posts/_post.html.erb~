@@ -10,7 +10,7 @@
 
   <div class='contents'>
     <time datetime="<%= post.created_at.to_s(:db) -%>"><%= "#{time_ago_in_words(post.created_at)} #{t("ago")}" %></time>
-    <%= forem_format(post.text)
+    <%= RedCloth.new(post.text).to_html #forem_format(post.text)
     %>
 
     <% if post.reply_to %>

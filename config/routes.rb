@@ -2,10 +2,12 @@ Forem::Application.routes.draw do
   mount Forem::Engine, :at => "/"
 	root :to => "forem/forums#index"
 
-  devise_for :users, :class_name => "Forem::User" do
+	devise_for :users, :class_name => "Forem::User" do
   	get "sign_in", :to => "devise/sessions#new"
   	#"sign_in" => "forem/devise/sessions#new", :as=>"sign_in"
   end
+
+	match 'users/:id', :to => "users#show", :as => :user
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

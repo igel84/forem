@@ -4,6 +4,10 @@ module Forem
          :recoverable, :rememberable, :trackable, :validatable
 
   	# Setup accessible (or protected) attributes for your model
-  	attr_accessible :email, :password, :password_confirmation
+  	attr_accessible :email, :password, :password_confirmation, :forem_admin, :name
+
+  	def to_s
+  		self.email
+  	end
   end
 end
